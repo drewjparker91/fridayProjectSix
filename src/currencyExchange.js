@@ -7,9 +7,8 @@ export async function callAPIExchange() {
       jsonifiedResponse = await response.json();
     } else {
       jsonifiedResponse = false;
-    }
-   
-    return jsonifiedResponse; 
+    }   
+    return jsonifiedResponse;
   } catch(error) {
     return false;
   }

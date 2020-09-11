@@ -7,6 +7,7 @@ import './css/styles.css';
 async function retrieveRate(currency, usDollar) {
   let response = await callAPIExchange();
   if (!response) {
+    console.log($(".error"))
     $(".error").html("Sorry, an error has ocurred while trying to get your currency exchange");  
   } else {   
     giveExchangeRate(currency, response, usDollar);    

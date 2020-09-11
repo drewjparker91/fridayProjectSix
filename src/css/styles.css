@@ -5,5 +5,14 @@
 }
 
 .btn {
-  margin: 1rem;
+  margin-top: 1rem;
+}
+
+.rateResult {
+  font-size: large;
+}
+
+.error {
+  color: red;
+  font-size: large;
 }
