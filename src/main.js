@@ -4,18 +4,12 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './css/styles.css';
 
-
-console.log("11");
 async function retrieveRate(currency, usDollar) {
   let response = await callAPIExchange();
-  console.log('response in retrieveRate: ' + response);
-  console.log('>A>A>A>A response in retrieveRate.conversion_rates.AUD: ' + response.conversion_rates.AUD);
   if (!response) {
     $(".error").html("Sorry, an error has ocurred while trying to get your currency exchange");  
-  } else {
-    
-    giveExchangeRate(currency, response, usDollar);
-    
+  } else {   
+    giveExchangeRate(currency, response, usDollar);    
   }
 }
 
@@ -32,10 +26,8 @@ function giveExchangeRate(currency, response, usDollar) {
     $(".rateResult").html(`The exchange rate for the Norwegian Krone is ${response.conversion_rates.NOK} and your converted total is ${(response.conversion_rates.NOK*usDollar).toFixed(2)}`);
   } else {
     $(".rateResult").html ("Sorry, the conversion rate you have entered is not available at this time.");
-    console.log("44");
   }
 }
-
 
 $(document).ready(function () {
   $("#inputForm").submit(function (event) {

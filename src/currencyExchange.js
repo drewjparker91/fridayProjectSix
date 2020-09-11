@@ -9,7 +9,6 @@ export async function callAPIExchange() {
       jsonifiedResponse = false;
     }
    
-    console.log('jsonifiedResponse.conversion_rates.AUD: ' + jsonifiedResponse.conversion_rates.AUD);
     return jsonifiedResponse; 
   } catch(error) {
     return false;
