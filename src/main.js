@@ -29,6 +29,11 @@ function giveExchangeRate(currency, response, usDollar) {
   }
 }
 
+function calculate(currency, response, usDollar)
+  let fromUSD = usDollar
+  let toCurrency = inputtedCurrency
+  return fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+    
 $(document).ready(function () {
   $("#inputForm").submit(function (event) {
     event.preventDefault();
