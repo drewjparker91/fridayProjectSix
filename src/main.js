@@ -28,11 +28,6 @@ function giveExchangeRate(currency, response, usDollar) {
     $(".rateResult").html ("Sorry, the conversion rate you have entered is not available at this time.");
   }
 }
-
-function calculate(currency, response, usDollar)
-  let fromUSD = usDollar
-  let toCurrency = inputtedCurrency
-  return fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
     
 $(document).ready(function () {
   $("#inputForm").submit(function (event) {
