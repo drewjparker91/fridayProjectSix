@@ -4,18 +4,20 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
-
+console.log("11");
 async function retrieveRate(currency, usDollar) {
   const response = await callAPIExchange();
   if (!response) {
     $(".error").html("Sorry, an error has ocurred while trying to get your currency exchange");
+    console.log("22");
   } else {
-    giveExchangeRate(currency, usDollar, response);
+    giveExchangeRate(currency, response, usDollar);
+    console.log("33");
   }
 }
 
 function giveExchangeRate(currency, usDollar, response) {
-  if (currency ===  "AUD") {
+  if (currency ==  "AUD") {
     $(".rateResult").html(`The exchange rate is ${response.conversion_rates.AUD} and your total is ${(response.conversion_rates.AUD*usDollar).toFixed(2)}`);
   } else if (currency === "CHF") {
     $(".rateResult").html(`The exchange rate is ${response.conversion_rates.CHF} and your total is ${(response.conversion_rates.CHF*usDollar).toFixed(2)}`);
@@ -27,6 +29,7 @@ function giveExchangeRate(currency, usDollar, response) {
     $(".rateResult").html(`The exchange rate is ${response.conversion_rates.NOK} and your total is ${(response.conversion_rates.NOK*usDollar).toFixed(2)}`);
   } else {
     $(".rateResult").html ("Sorry, the conversion rate you have entered is not available at this time.");
+    console.log("44");
   }
 }
 
