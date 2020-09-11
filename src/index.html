@@ -10,16 +10,16 @@
       </div>
       <form id="inputForm">
         <div class="form-group">
-          <label for="exchange">Enter amount in USD</label><br>
-          <input class="exchange" class="form-control" type="text">
+          <label for="exchangeAmount">Enter amount in USD</label><br>
+          <input class="exchangeAmount" class="form-control" type="text">
         </div>
         <div id="form-group">
-          <label for="currency">Enter currency code of desired converstion<br>(for Australian Dollars, enter AUD)</label><br>
-          <input class="currency" class="form-control" maxlength=3>
+          <label for="exchangeCurrency">Enter currency code of desired converstion<br>(for Australian Dollars, enter AUD)</label><br>
+          <input class="exchangeCurrency" class="form-control" maxlength=3>
         </div>
         <div id="results">
-          <h2>The conversion from USD to desired currency is:</h2>
-          <p id="rateResult"></p>
+          <p class="rateResult"></p>
+          <p class="error"></p>
         </div>
         <button type="submit" class="btn btn-success">Show me!</button>
       </form>
