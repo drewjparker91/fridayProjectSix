@@ -14,7 +14,10 @@ function giveExchangeRate(currency, usDollar, response) {
     $(".rateResult").html(`The exchange rate for the desired currency is ${response.conversion_rates.DKK} and your total is ${(response.conversion_rates.DKK*usDollar).toFixed(2)}`)
   } else if (currency === ILS) {
     $(".rateResult").html(`The exchange rate for the desired currency is ${response.conversion_rates.ILS} and your total is ${(response.conversion_rates.ILS*usDollar).toFixed(2)}`)
-
+  } else if (currency === NOK) {
+    $(".rateResult").html(`The exchange rate for the desired currency is ${response.conversion_rates.NOK} and your total is ${(response.conversion_rates.NOK*usDollar).toFixed(2)}`)
+  } else {
+    $(".rateResult").html ("Sorry, the conversion rate you have entered is not available at this time.")
   }
 }
 
