@@ -1,3 +1,4 @@
+
 export async function callAPIExchange() {
   try {
     let response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
@@ -7,6 +8,8 @@ export async function callAPIExchange() {
     } else {
       jsonifiedResponse = false;
     }
+   
+    console.log('jsonifiedResponse.conversion_rates.AUD: ' + jsonifiedResponse.conversion_rates.AUD);
     return jsonifiedResponse; 
   } catch(error) {
     return false;
