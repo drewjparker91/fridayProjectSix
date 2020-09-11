@@ -10,6 +10,8 @@ function giveExchangeRate(currency, usDollar, response) {
     $(".rateResult").html(`The exchange rate for the desired currency is ${response.conversion_rates.AUD} and your total is ${(response.conversion_rates.AUD*usDollar).toFixed(2)}`)
   } else if (currency === CHF) {
     $(".rateResult").html(`The exchange rate for the desired currency is ${response.conversion_rates.CHF} and your total is ${(response.conversion_rates.CHF*usDollar).toFixed(2)}`)
+  } else if (curreny === DKK) {
+    $(".rateResult").html(`The exchange rate for the desired currency is ${response.conversion_rates.DKK} and your total is ${(response.conversion_rates.DKK*usDollar).toFixed(2)}`)
   }
 }
 
