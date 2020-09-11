@@ -1,27 +1,26 @@
+<!DOCTYPE html>
 <html lang="en-US">
-  <head>
+<head>
     <title>Weather</title>
   </head>
   <body>
     <div class="container">
-      <h1>Get Weather Conditions From Anywhere!</h1>
-      <label for="location">Enter a City:</label>
-      <input id="location" type="text" /><br>
-      <label for="locationS">Enter a State:</label>
-      <input id="locationS" type="text" /><br>
-      <label for="latitude"> Enter Latitude:</label>
-      <input id="latitude" type="text"/><br>
-      <label for="longitude"> Enter Longitude:</label>
-      <input id="longitude" type="text"><br>
-      <button class="btn-success" id="weatherLocation">
-        Get Current Temperature and Humidity
-      </button>
-      <div class="showErrors"></div>
-      <div class="showHumidity"></div>
-      <div class="showTempK"></div>
-      <div class="showTempF"></div>
-      <div class="showWeather"></div>
-      <div class="showWind"></div>
-      <div class="showHistory"></div>
+      <div class="jumbotron">
+        <h1>Currency Exchange</h1>
+      </div>
+      <form id="inputForm">
+        <div class="form-group">
+          <label for="exchange">Enter ammount in USD</label>
+          <input class="exchange" class="form-control" type="text">
+        </div>
+        <div id="form-group">
+          <label for="currency">Enter currency type of desired country</label>
+          <input class="currency" class="form-control" maxlength=3>
+        </div>
+        <div id="results">
+          <h2>The conversion from USD to desired currency is:</h2>
+          <p id="rateResult"></p>
+        </div>
+        <button type="submit" class="btn btn-success">Show me!</button>
   </body>
 </html>
